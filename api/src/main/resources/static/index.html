@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Design Pattern Project</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/journal/bootstrap.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">$(function (){$('[data-toggle="tooltip"]').tooltip()})</script>
+
+        <style type="text/css">
+            .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+                background-color: #2FC42F;
+            }
+            .panel-title > a:hover, .panel-title > a:focus {
+                color:#777777;
+            }
+            a{
+                color: #1FBF1F;
+            }
+            .tooltip-arrow {
+                border-top-color:#000 !important;
+            }
+            .tooltip-inner{
+                background-color:#000 !important;
+            }
+            .panel-body {
+                padding: 0;
+            }
+            pre {
+                border-radius: 0;
+                overflow-x: auto;
+                margin: 0;
+            }
+            pre code {
+                white-space: pre;
+                word-wrap: break-word;
+            }
+            table a:not(.btn), .table a:not(.btn) {
+                text-decoration: none;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                display: block;
+                max-width: 450px;
+            }
+            body {
+                padding-top: 25px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-52657458-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            (function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+            /* ]]> */
+        </script>
+
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><img alt="LOGO" src="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-1/p200x200/15241241_1550844681608766_4271780119211267706_n.png?oh=05d69cd968063c3723c47ddd55ffd9c0&oe=59B86952" height="65px;" style="background-color:transparent;"></a>
+                    </div>
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><h1>Projet design pattern</h1></a>
+                    </div>
+                </div>
+            </nav>
+            <h2>Api documentation</h2>
+            <div class="col-sm-12">
+                <h4 class="page-header" id="query" style="margin:0 0 15;">Articles</h4>
+                <div class="panel-group" role="tablist">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="query-StatusHeader">
+                            <h4 class="panel-title">
+                                <a href="#query-Status" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="query-Status" style="text-decoration:none;">
+                                    <span class="label label-success">GET</span> /api/v1/article/{label} <span class="pull-right hidden-xs hidden-sm">Récupérer un article.</span></a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse" role="tabpanel" id="query-Status" aria-labelledby="query-StatusHeader" aria-expanded="false" style="height: 0px;padding:0px 20px 20px 20px;">
+                            <h4 style="margin-bottom:20px;">Attributs:</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>Attribut</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody><tr><th><span class="label label-danger">Required</span></th><th scope="row">label</th><td>String</td><td>Nom de l'article à récupérer.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="query-articlesHeader">
+                            <h4 class="panel-title">
+                                <a href="#query-articlesStatus" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="query-Status" style="text-decoration:none;">
+                                    <span class="label label-success">GET</span> /api/v1/article/ <span class="pull-right hidden-xs hidden-sm">Récupérer tous les articles.</span></a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse" role="tabpanel" id="query-articlesStatus" aria-labelledby="query-articlesHeader" aria-expanded="false" style="height: 0px;padding:0px 20px 20px 20px;">
+                            <p>Aucun attribut ni json juste get de l'url.</p>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="query-articleCreateHeader">
+                            <h4 class="panel-title">
+                                <a href="#query-articleCreateStatus" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="query-Status" style="text-decoration:none;">
+                                    <span class="label label-danger">POST</span> /api/v1/article/ <span class="pull-right hidden-xs hidden-sm">Créer un article.</span></a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse" role="tabpanel" id="query-articleCreateStatus" aria-labelledby="query-articleCreateHeader" aria-expanded="false" style="height: 0px;padding:0px 20px 20px 20px;">
+                            <h4 style="margin-top:20px;margin-bottom:20px;">Sample:</h4>
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">application/json</h4>
+                                </div>
+                                <div class="panel-body"><pre><code>
+{
+	"label" : "ArticleTest1",
+	"type" : "LUXE",
+	"color" : "ROUGE",
+	"size" : "XXL"
+}
+                                </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="query-articleDeleteHeader">
+                            <h4 class="panel-title">
+                                <a href="#query-articleDeleteStatus" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="query-Status" style="text-decoration:none;">
+                                    <span class="label label-warning">DELETE</span> /api/v1/article/{label} <span class="pull-right hidden-xs hidden-sm">Supprimer un article.</span></a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse" role="tabpanel" id="query-articleDeleteStatus" aria-labelledby="query-articleDeleteHeader" aria-expanded="false" style="height: 0px;padding:0px 20px 20px 20px;">
+                            <h4 style="margin-bottom:20px;">Attributs:</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>Attribut</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody><tr><th><span class="label label-danger">Required</span></th><th scope="row">label</th><td>String</td><td>Nom de l'article a supprimer.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <h4 class="page-header" id="query" style="margin:0 0 15;">Catalogues</h4>
+                <div class="panel-group" role="tablist">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="query-catalogHeader">
+                            <h4 class="panel-title">
+                                <a href="#catalog-Status" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="query-Status" style="text-decoration:none;">
+                                    <span class="label label-success">GET</span> /api/v1/catalog/{label} <span class="pull-right hidden-xs hidden-sm">Récupérer un catalogue.</span></a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse" role="tabpanel" id="catalog-Status" aria-labelledby="query-catalogHeader" aria-expanded="false" style="height: 0px;padding:0px 20px 20px 20px;">
+                            <h4 style="margin-bottom:20px;">Attributs:</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>Attribut</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody><tr><th><span class="label label-danger">Required</span></th><th scope="row">label</th><td>String</td><td>Nom du catalogue à récupérer.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="query-catalogsHeader">
+                            <h4 class="panel-title">
+                                <a href="#query-catalogsStatus" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="query-Status" style="text-decoration:none;">
+                                    <span class="label label-success">GET</span> /api/v1/catalog/ <span class="pull-right hidden-xs hidden-sm">Récupérer tous les catalogues.</span></a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse" role="tabpanel" id="query-catalogsStatus" aria-labelledby="query-catalogsHeader" aria-expanded="false" style="height: 0px;padding:0px 20px 20px 20px;">
+                            <p>Aucun attribut ni json juste get de l'url.</p>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="query-catalogCreateHeader">
+                            <h4 class="panel-title">
+                                <a href="#query-catalogCreateStatus" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="query-Status" style="text-decoration:none;">
+                                    <span class="label label-danger">POST</span> /api/v1/catalog/ <span class="pull-right hidden-xs hidden-sm">Créer un catalogue.</span></a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse" role="tabpanel" id="query-catalogCreateStatus" aria-labelledby="query-catalogCreateHeader" aria-expanded="false" style="height: 0px;padding:0px 20px 20px 20px;">
+                            <h4 style="margin-top:20px;margin-bottom:20px;">Sample:</h4>
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">application/json</h4>
+                                </div>
+                                <div class="panel-body"><pre><code>
+{
+	"label" : "CatalogTest1",
+	"articles" : null
+}
+                                </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="query-catalogDeleteHeader">
+                            <h4 class="panel-title">
+                                <a href="#query-catalogDeleteStatus" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="query-Status" style="text-decoration:none;">
+                                    <span class="label label-warning">DELETE</span> /api/v1/catalog/{label} <span class="pull-right hidden-xs hidden-sm">Supprimer un catalogue.</span></a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse" role="tabpanel" id="query-catalogDeleteStatus" aria-labelledby="query-catalogDeleteHeader" aria-expanded="false" style="height: 0px;padding:0px 20px 20px 20px;">
+                            <h4 style="margin-bottom:20px;">Attributs:</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>Attribut</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody><tr><th><span class="label label-danger">Required</span></th><th scope="row">label</th><td>String</td><td>Nom du catalogue à supprimer.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <h3>Télécharger les samples postman :</h3>
+                <a href="dl/pattern-design.postman_collection.json" target="_blank">Postman samples</a>
+            </div>
+        </div>
+        <div class="jumbotron" style="margin-bottom:0;margin-top:60px;padding-top:32px;padding-bottom:32px;background:#6B6B6B;">
+            <div class="container">
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                        <h2 style="margin-top:0;">Sponsored By</h2>
+                    </div>
+                    <div class="col-md-12" style="margin-bottom: 10.5px;">
+                        <h2><small>Alexis VACHARD & Thomas TOURNOUX</small></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-52657458-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>

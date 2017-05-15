@@ -1,0 +1,117 @@
+{
+	"variables": [],
+	"info": {
+		"name": "pattern-design",
+		"_postman_id": "793feec2-0737-0e2d-95bb-297966953093",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Articles",
+			"request": {
+				"url": "http://localhost:8080/api/v1/article",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Article",
+			"request": {
+				"url": "http://localhost:8080/api/v1/article/ArticleTest1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create article",
+			"request": {
+				"url": "http://localhost:8080/api/v1/article",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"label\" : \"ArticleTest1\",\n\t\"type\" : \"LUXE\",\n\t\"color\" : \"ROUGE\",\n\t\"size\" : \"XXL\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Article",
+			"request": {
+				"url": "http://localhost:8080/api/v1/article/ArticleTest1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Catalogs",
+			"request": {
+				"url": "http://localhost:8080/api/v1/catalog/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Catalog",
+			"request": {
+				"url": "http://localhost:8080/api/v1/catalog/CatalogTest1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create catalog",
+			"request": {
+				"url": "http://localhost:8080/api/v1/catalog",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"label\" : \"CatalogTest1\",\n\t\"articles\" : null\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete catalog",
+			"request": {
+				"url": "http://localhost:8080/api/v1/catalog/CatalogTest1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

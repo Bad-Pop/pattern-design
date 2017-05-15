@@ -1,0 +1,8 @@
+!.gitignore
+.idea
+pattern-design.iml
+*.iml
+api/target
+dao/target
+model/target
+service/target

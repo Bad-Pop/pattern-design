@@ -1,0 +1,25 @@
+body{margin-top: 120px;}
+a{text-decoration:none !important;}
+a:hover,a:focus{color:#00D604;text-decoration:underline}
+a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
+.dropdown-header{padding-left: 15px;padding-right: 15px;font-size: 9px;text-transform: uppercase;font-weight: bold;}
+.navbar-nav > li > a {background-color: transparent !important;}
+.navbar-right > li > a:after {display:none;}
+.navbar-nav > li > a:after{height: 1px;position: absolute;left: 100%;right: 100%;content: "";-webkit-transition: all 0.4s ease-out;-moz-transition: all 0.4s ease-out;-o-transition: all 0.4s ease-out;-ms-transition: all 0.4s ease-out;bottom: 25px;}
+.navbar-nav > li > a:hover{color: #00D604;}
+.navbar-nav > li > a:hover:after{background: #00D604;right: 15px;left: 15px;}
+.navbar-nav > li > a:focus:after{background: #00D604;right: 15px;left: 15px;}
+.navbar-fixed-top {min-height:120px;}
+.navbar-nav > li > a {line-height: 80px;}
+.navbar-brand {height: 120px;padding-top: 25px;}
+.navbar {font-weight:inherit;font-family: 'Open Sans', sans-serif;}
+.jumbotron h1, .jumbotron h2, .jumbotron h3, .jumbotron h4, .jumbotron h5, .jumbotron h6{color:white;}
+.jumbotron a {color:white;font-weight:initial;}
+.jumbotron a:focus {color:white;}
+body {font-family: 'Droid Sans', sans-serif;}
+h1,h2,h3,h4,h5,h6 {font-family: 'Droid Sans', sans-serif; font-weight: initial;}
+.jumbotron h1, .jumbotron h2, .jumbotron h3, .jumbotron h4, .jumbotron h5, .jumbotron h6 {font-family: 'Droid Sans', sans-serif;}
+.chatImgs {  -webkit-filter: grayscale(100%);-webkit-transition: .5s ease-in-out;-moz-filter: grayscale(100%); -moz-transition: .5s ease-in-out;-o-filter: grayscale(100%); -o-transition: .5s ease-in-out;filter: grayscale(100%);-webkit-backface-visibility: hidden;width:35px;height:35px;}
+.chatImgs:hover{-webkit-filter: grayscale(0%);-webkit-transition: .5s ease-in-out;-moz-filter: grayscale(0%);-moz-transition: .5s ease-in-out;-o-filter: grayscale(0%);-o-transition: .5s ease-in-out;filter: grayscale(0%);}
+::selection { background: #B7FFBD; }
+::-moz-selection { background: #B7FFBD; }
